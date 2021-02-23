@@ -1,4 +1,12 @@
-# Getting Started with Create React App
+# Next Level Week 04 - React
+
+**Projeto baseado na Next Level Week 04 - Trilha de React - Oferecido pela Rocketseat**
+
+* Visualize o [demo](https://nlw-04-react-arp.netlify.app/) neste link.
+
+<br>
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
