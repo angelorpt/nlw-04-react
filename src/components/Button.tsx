@@ -1,8 +1,12 @@
-export function Button() {
-    return (
-        <button type="button">
-            Botão
-            <strong>Teste</strong>
-        </button>
-    );
+interface ButtonProps {
+  color    : string;
+  children : string;
+}
+
+export function Button(props: ButtonProps) {
+  return (
+    <button type="button" style={{ backgroundColor: props.color }}>
+      {props.children}
+    </button>
+  );
 }
