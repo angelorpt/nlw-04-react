@@ -6,7 +6,12 @@ let countdownTimeout: NodeJS.Timeout;
 // Interfaces
 //-------------
 interface CountdownContextData {
-
+  minutes: Number,
+  seconds: Number,
+  hasFinished: Boolean,
+  isActive: Boolean,
+  startCountdown: () => void,
+  resetCountdown: () => void, 
 }
 
 interface CountdownProviderProps {
@@ -14,7 +19,7 @@ interface CountdownProviderProps {
 }
 
 
-const CountdownContext = createContext({} as CountdownContextData)
+export const CountdownContext = createContext({} as CountdownContextData)
 
 // Provider
 //---------------
@@ -37,6 +42,7 @@ export function CountdownProvider({ children }: CountdownProviderProps) {
   function resetCountdown() {
     clearTimeout(countdownTimeout)
     setIsActive(false)
+    setHasFinished(false)
     setTime(25 * 60)
   }
 
